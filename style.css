@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 20px 100px;
+   background: blue;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 99;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+}
+
+
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .5s;
+
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+nav .active {
+   border-bottom: 3px solid white;
+}
+
+.Facebook {
+    font-size: 2.8rem;
+    color: white;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.Facebook:hover {
+    transform: scale(1.1);
+}
+
+.wrapper {
+    position: relative;
+    left: 439px;
+    top: 180px;
+    width: 400px;
+    height: 340px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .boxFORM {
+    width: 100%;
+    padding: 40px;
+}
+
+.boxFORM h2{
+    font-size: 2rem;
+    color: #162938;
+    text-align: center;
+}
+
+.boxINPUT {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.boxINPUT label {
+    position: absolute;
+    top: 15%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-weight: none;
+    transition: .5s;
+}
+
+.boxINPUT input:focus~label,
+.boxINPUT input:valid~label {
+    top: -5px;
+}
+
+.boxINPUT input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.3zem;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.boxINPUT .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.remember-me label {
+    font-size: 1em;
+    color: #162938;
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
